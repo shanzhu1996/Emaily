@@ -1,6 +1,9 @@
-module.exports = {
-    googleClientID: '822718323036-umbskml8cuqreulnv9m4nof1vfck330f.apps.googleusercontent.com',
-    googleClientSecret: 'Lp8ghSOJKHXID09A0vTJGfV9',
-    mongoURI: 'mongodb+srv://emaily:rVy4uQeWfpM1KdaN@emaily.xly8m.mongodb.net/emailydb?retryWrites=true&w=majority',
-    cookieKey: 'jfosdinfsodngfjsoidfjdoissf'
-};
+if (process.env.NODE_ENV === 'production') {
+    module.exports = require('./prod');   
+} else {
+    module.exports = require('./dev');
+}
+
+// prod Google id
+//180243509779-r32s8loe25sgbv78fpghikheu1m3mge6.apps.googleusercontent.com
+// prod google secret: 6sZ1mxHJ9fbwIPy49rfqLt86
